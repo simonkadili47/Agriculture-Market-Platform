@@ -28,12 +28,12 @@ const Sidebar = () => {
     <div className="w-1/5 h-screen bg-white p-6 max-sm:hidden">
       <ul>
         <li className="bg-orange-400 p-3 px-4 rounded-lg inline-flex items-center">
-          <Link to="/dashboardf" className="flex items-center text-gray-700 hover:text-blue-600">
+          <Link to="/Farmer-dashboard" className="flex items-center text-gray-700 hover:text-blue-600">
             <TfiDashboard className="mr-2 text-2xl" />
             <span>Dashboard</span>
           </Link>
         </li>
-        <li className="mb-6">
+        <li className="mb-6 mt-3">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('myProducts')}>
             <AiFillProduct className="mr-2 text-xl" />
             <span className="flex-grow">My Products</span>
