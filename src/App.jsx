@@ -9,7 +9,7 @@ import AdiminDashboard from './Main dashboard/Admin_Dashboard';
 
 import AddProducts from './Pages/AddProducts';
 import ViewProduct from './Pages/ViewProduct';
-
+import Orders from './Pages/Orders';
 
 
 
@@ -26,6 +26,7 @@ const App = () => {
         <Route path = 'AdminDashboard' element ={<AdiminDashboard/>}/>
         <Route path = '/farmer/add-product' element ={<AddProducts/>}/>
         <Route path = '/farmer/view-product' element ={<ViewProduct/>}/>
+        <Route path = '/farmer/orders' element ={<Orders/>}/>
    
         
         

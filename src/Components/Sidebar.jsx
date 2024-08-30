@@ -53,22 +53,12 @@ const Sidebar = () => {
         <li className="mb-6">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('orders')}>
             <RxBorderSplit className="mr-2 text-xl" />
-            <span className="flex-grow">Orders</span>
-            {dropdownStates.orders ? <FaChevronUp /> : <FaChevronDown />}
+            <li className="mb-2">
+                <Link to="/farmer/orders" className="text-gray-600 hover:text-blue-600"> Orders</Link>
+              </li>
+            
           </div>
-          {dropdownStates.orders && (
-            <ul className="mt-2 ml-4">
-              <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Current Orders</Link>
-              </li>
-              <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Order Status</Link>
-              </li>
-              <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Order History</Link>
-              </li>
-            </ul>
-          )}
+        
         </li>
         <li className="mb-6">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('marketTrends')}>
