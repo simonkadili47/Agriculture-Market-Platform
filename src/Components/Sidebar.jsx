@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
   const [dropdownStates, setDropdownStates] = useState({
     myProducts: false,
-    orders: false,
     marketTrends: false,
     payments: false,
     settings: false
@@ -25,7 +24,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-1/5 h-screen bg-white p-6 max-sm:hidden">
+    <div className="w-1/5 h-screen bg-white p-6 ">
       <ul>
         <li className="bg-orange-400 p-3 px-4 rounded-lg inline-flex items-center">
           <Link to="/Farmer-dashboard" className="flex items-center text-gray-700 hover:text-blue-600">
@@ -51,11 +50,14 @@ const Sidebar = () => {
           )}
         </li>
         <li className="mb-6">
-          <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('orders')}>
+          <div className="flex items-center text-gray-700 cursor-pointer" >
             <RxBorderSplit className="mr-2 text-xl" />
+            <ul>
             <li className="mb-2">
-                <Link to="/farmer/orders" className="text-gray-600 hover:text-blue-600"> Orders</Link>
+            <Link to="/Farmer/orders" className="text-gray-600 hover:text-blue-600"> Orders</Link>
+
               </li>
+              </ul>
             
           </div>
         
@@ -69,7 +71,7 @@ const Sidebar = () => {
           {dropdownStates.marketTrends && (
             <ul className="mt-2 ml-4">
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Current Trends</Link>
+                <Link to="/farmer/CurrentTrends" className="text-gray-600 hover:text-blue-600">Current Trends</Link>
               </li>
               <li className="mb-2">
                 <Link to="#" className="text-gray-600 hover:text-blue-600">Trend Analysis</Link>
