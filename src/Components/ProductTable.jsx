@@ -1,13 +1,11 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', width: 70 },
   {
     field: 'Productname',
     headerName: 'Product name',
@@ -55,31 +53,23 @@ const columns = [
   {
     field: 'Action',
     headerName: 'Action',
-    width: 180, // Adjust width as needed
+    width: 80, // Reduced width for the Action column
     renderCell: (params) => (
-      <Box sx={{ display: 'flex', gap: '8px' }}> {/* Reduced gap */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: '4px' }}> {/* Reduced gap */}
-          <IconButton color="primary" onClick={() => handleEdit(params.row)}>
-            <EditIcon />
-          </IconButton>
-          <Button variant="text" onClick={() => handleEdit(params.row)}>
-            Edit
-          </Button>
-        </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: '4px' }}> {/* Reduced gap */}
-          <IconButton color="error" onClick={() => handleDelete(params.row)}>
-            <DeleteIcon />
-          </IconButton>
-          <Button variant="text" onClick={() => handleDelete(params.row)}>
-            Delete
-          </Button>
-        </Box>
-      </Box>
+      <div style={{ display: 'flex', gap: '4px', justifyContent: 'center', alignItems: 'center' }}>
+        <IconButton color="primary" onClick={() => handleEdit(params.row)} size="small">
+          <EditIcon fontSize="small" />
+        </IconButton>
+        <IconButton color="error" onClick={() => handleDelete(params.row)} size="small">
+          <DeleteIcon fontSize="small" />
+        </IconButton>
+      </div>
     ),
   },
 ];
 
 const rows = [
+  { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'very nice rice' },
+  { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'very nice rice' },
   { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'very nice rice' },
   // Add more rows as needed
 ];
@@ -96,7 +86,7 @@ const handleDelete = (row) => {
 
 export default function ProductTable() {
   return (
-    <Box sx={{ height: 400, width: '100%' }}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -111,6 +101,6 @@ export default function ProductTable() {
         checkboxSelection
         disableRowSelectionOnClick
       />
-    </Box>
+    </div>
   );
 }
