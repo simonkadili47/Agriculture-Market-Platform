@@ -74,9 +74,6 @@ const Sidebar = () => {
                 <Link to="/farmer/CurrentTrends" className="text-gray-600 hover:text-blue-600">Current Trends</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Trend Analysis</Link>
-              </li>
-              <li className="mb-2">
                 <Link to="#" className="text-gray-600 hover:text-blue-600">Market Reports</Link>
               </li>
             </ul>
