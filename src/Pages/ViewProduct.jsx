@@ -9,10 +9,16 @@ const ViewProduct = () => {
       <Header />
       <div className="flex flex-1">
         <Sidebar />
-        <div className=' flex-1'>
-          <h1 className='text-xl font-bold text-black mt-4 ml-4'>View All Product</h1>
-          <div className='mt-4 mr-16 ml-8'> {/* Adjust margin here for smaller space */}
-          <ProductTable />
+        <div className="flex-1 p-4">
+          {/* Flex container to align the heading and button */}
+          <div className="flex justify-between items-center mt-4 ml-4 mr-4">
+            <h1 className="text-xl font-bold text-black">View All Products</h1>
+            <button className="p-3 bg-green-600 text-white rounded-lg">
+              <a href="/farmer/add-product">Add Product</a>
+            </button>
+          </div>
+          <div className="mt-10 mr-16 ml-8"> {/* Adjust margin here for smaller space */}
+            <ProductTable />
           </div>
         </div>
       </div>
