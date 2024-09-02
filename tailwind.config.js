@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        outfit: ["Outfit"]
+      },
       colors: {
         'custom-gray': '#fafbfe',
       },

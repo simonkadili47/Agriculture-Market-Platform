@@ -13,13 +13,14 @@ import ViewProduct from './Pages/ViewProduct';
 import Orders from './Pages/Orders';
 import CurrentTrends from './Pages/CurrentTrends';
 import AddCategory from './Pages/AddCategory';
+import ViewCategory from './Pages/ViewCategory';
 
 
 
 
 const App = () => {
   return (
-    <div >
+    <div className="font-outfit" >
     
       <Routes>
         <Route path='login' element = {<Login/>}/>
@@ -32,7 +33,7 @@ const App = () => {
         <Route path = '/farmer/orders' element ={<Orders/>}/>
         <Route path = '/farmer/CurrentTrends' element ={<CurrentTrends/>}/>
         <Route path = '/farmer/add-category' element ={<AddCategory/>}/>
-   
+        <Route path = '/farmer/view-category' element ={<ViewCategory/>}/>
         
         
        

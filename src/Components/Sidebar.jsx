@@ -50,7 +50,7 @@ const Sidebar = () => {
                 <Link to="/farmer/add-category" className="text-gray-600 hover:text-blue-600">Add Category</Link>
               </li>
               <li className="mb-2">
-                <Link to="" className="text-gray-600 hover:text-blue-600">View Category</Link>
+                <Link to="/farmer/view-category" className="text-gray-600 hover:text-blue-600">View Category</Link>
               </li>
             </ul>
           )}
