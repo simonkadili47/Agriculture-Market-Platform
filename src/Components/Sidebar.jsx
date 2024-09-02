@@ -46,6 +46,12 @@ const Sidebar = () => {
               <li className="mb-2">
                 <Link to="/farmer/view-product" className="text-gray-600 hover:text-blue-600">View Products</Link>
               </li>
+              <li className="mb-2">
+                <Link to="/farmer/add-category" className="text-gray-600 hover:text-blue-600">Add Category</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="" className="text-gray-600 hover:text-blue-600">View Category</Link>
+              </li>
             </ul>
           )}
         </li>
