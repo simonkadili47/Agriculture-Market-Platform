@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import IconButton from '@mui/material/IconButton';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
+import { Button } from '@mui/material';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -51,17 +50,29 @@ const columns = [
     ),
   },
   {
-    field: 'Action',
-    headerName: 'Action',
-    width: 80, // Reduced width for the Action column
+    field: 'actions',
+    headerName: 'Actions',
+    width: 150,
+    sortable: false,
     renderCell: (params) => (
-      <div style={{ display: 'flex', gap: '4px', justifyContent: 'center', alignItems: 'center' }}>
-        <IconButton color="primary" onClick={() => handleEdit(params.row)} size="small">
-          <EditIcon fontSize="small" />
-        </IconButton>
-        <IconButton color="error" onClick={() => handleDelete(params.row)} size="small">
-          <DeleteIcon fontSize="small" />
-        </IconButton>
+      <div >
+        <Button
+          variant="contained"
+          size="small"
+          sx={{ backgroundColor: 'green', color: 'white', marginRight: 1, '&:hover': { backgroundColor: 'darkgreen' } }}
+          onClick={() => handleEdit(params.row.id)}
+        >
+          Edit
+        </Button>
+        <Button
+          variant="contained"
+          color="error" // MUI provides a built-in 'error' color variant which is red
+          size="small"
+          sx={{ backgroundColor: 'red', color: 'white', marginRight: 8  }}
+          onClick={() => handleDelete(params.row.id)}
+        >
+          Delete
+        </Button>
       </div>
     ),
   },
