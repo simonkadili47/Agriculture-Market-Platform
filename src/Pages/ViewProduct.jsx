@@ -17,7 +17,7 @@ const ViewProduct = () => {
               <a href="/farmer/add-product">Add Product</a>
             </button>
           </div>
-          <div className="mt-10 mr-6 ml-8"> {/* Adjust margin here for smaller space */}
+          <div className="mt-6 mr-6 ml-6"> {/* Adjust margin here for smaller space */}
            
            <ProductTable  />
            

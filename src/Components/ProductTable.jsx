@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import IconButton from '@mui/material/IconButton';
 import { Button } from '@mui/material';
 
 const columns = [
@@ -55,20 +54,36 @@ const columns = [
     width: 150,
     sortable: false,
     renderCell: (params) => (
-      <div >
+      <div>
         <Button
           variant="contained"
           size="small"
-          sx={{ backgroundColor: 'green', color: 'white', marginRight: 1, '&:hover': { backgroundColor: 'darkgreen' } }}
+          sx={{ 
+            backgroundColor: 'green', 
+            color: 'white', 
+            marginRight: 1, 
+            padding: '2px 8px', // Adjust padding for a smaller look
+            fontSize: '0.75rem', // Smaller font size
+            minWidth: '50px', // Minimum width to ensure consistency
+            '&:hover': { backgroundColor: 'darkgreen' } 
+          }}
           onClick={() => handleEdit(params.row.id)}
         >
           Edit
         </Button>
         <Button
           variant="contained"
-          color="error" // MUI provides a built-in 'error' color variant which is red
+          color="error"
           size="small"
-          sx={{ backgroundColor: 'red', color: 'white', marginRight: 8  }}
+          sx={{ 
+            backgroundColor: 'red', 
+            color: 'white', 
+            padding: '2px 8px', // Adjust padding
+            fontSize: '0.75rem', // Smaller font size
+            minWidth: '50px', // Minimum width for consistency
+            marginRight: 0, // Adjust margin as needed
+            '&:hover': { backgroundColor: 'darkred' } 
+          }}
           onClick={() => handleDelete(params.row.id)}
         >
           Delete
@@ -80,19 +95,17 @@ const columns = [
 
 const rows = [
   { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'very nice rice' },
-  { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'very nice rice' },
-  { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'very nice rice' },
-  // Add more rows as needed
+ 
 ];
 
-const handleEdit = (row) => {
+const handleEdit = (id) => {
   // Handle the edit action here
-  console.log('Edit row:', row);
+  console.log('Edit row with ID:', id);
 };
 
-const handleDelete = (row) => {
+const handleDelete = (id) => {
   // Handle the delete action here
-  console.log('Delete row:', row);
+  console.log('Delete row with ID:', id);
 };
 
 export default function ProductTable() {
