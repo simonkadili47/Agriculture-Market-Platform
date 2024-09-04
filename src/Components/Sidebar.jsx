@@ -94,13 +94,13 @@ const Sidebar = () => {
           {dropdownStates.payments && (
             <ul className="mt-2 ml-4">
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Transaction History</Link>
+                <Link to="#" className="text-gray-600 hover:text-blue-600">Todays Payments</Link>
               </li>
               <li className="mb-2">
                 <Link to="#" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Payouts</Link>
+                <Link to="#" className="text-gray-600 hover:text-blue-600">Pending Payments</Link>
               </li>
             </ul>
           )}

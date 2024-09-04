@@ -62,9 +62,9 @@ const columns = [
             backgroundColor: 'green', 
             color: 'white', 
             marginRight: 1, 
-            padding: '2px 8px', // Adjust padding for a smaller look
-            fontSize: '0.75rem', // Smaller font size
-            minWidth: '50px', // Minimum width to ensure consistency
+            padding: '2px 8px', 
+            fontSize: '0.75rem', 
+            minWidth: '50px', 
             '&:hover': { backgroundColor: 'darkgreen' } 
           }}
           onClick={() => handleEdit(params.row.id)}
@@ -78,10 +78,10 @@ const columns = [
           sx={{ 
             backgroundColor: 'red', 
             color: 'white', 
-            padding: '2px 8px', // Adjust padding
-            fontSize: '0.75rem', // Smaller font size
-            minWidth: '50px', // Minimum width for consistency
-            marginRight: 0, // Adjust margin as needed
+            padding: '2px 8px', 
+            fontSize: '0.75rem', 
+            minWidth: '50px', 
+            marginRight: 0, 
             '&:hover': { backgroundColor: 'darkred' } 
           }}
           onClick={() => handleDelete(params.row.id)}

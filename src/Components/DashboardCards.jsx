@@ -8,16 +8,16 @@ const DashboardCards = () => {
     <div className="grid grid-cols-3 gap-4">
       <div className="bg-white p-6 rounded-lg shadow-lg">
         <h3 className="text-lg font-semibold"><AiFillProduct /> Total Products</h3>
-        <p className="text-2xl font-bold">123</p> {/* Replace with dynamic value */}
+        <p className="text-2xl font-bold">123</p> 
       </div>
       <div className="bg-white p-6 rounded-lg shadow-lg">
-        <h3 className="text-lg font-semibold"><GrUserManager /> Total Users</h3>
-        <p className="text-2xl font-bold">456</p> {/* Replace with dynamic value */}
+        <h3 className="text-lg font-semibold"><AiFillProduct /> Pending Orders</h3>
+        <p className="text-2xl font-bold">6</p> 
       </div>
       <div className="bg-white p-6 rounded-lg shadow-lg">
         <FaMoneyBillAlt />
         <h3 className="text-lg font-semibold">Total Payments</h3>
-        <p className="text-2xl font-bold">$7890</p> {/* Replace with dynamic value */}
+        <p className="text-2xl font-bold">$7890</p> 
       </div>
     </div>
   );
