@@ -16,6 +16,7 @@ import AddCategory from './Pages/AddCategory';
 import ViewCategory from './Pages/ViewCategory';
 import TodaysPayments from './Pages/TodaysPayments';
 import PaymentsMethod from './Pages/PaymentsMethod';
+import AddPaymentmethod from './Pages/AddPaymentmethod';
 
 
 
@@ -38,6 +39,7 @@ const App = () => {
         <Route path = '/farmer/view-category' element ={<ViewCategory/>}/>
         <Route path = '/farmer/todays-payments' element ={<TodaysPayments/>}/>
         <Route path = '/farmer/payments-method' element ={<PaymentsMethod/>}/>
+        <Route path = '/farmer/add-payment-method' element ={<AddPaymentmethod/>}/>
         
        
       </Routes>

@@ -93,14 +93,17 @@ const Sidebar = () => {
           </div>
           {dropdownStates.payments && (
             <ul className="mt-2 ml-4">
+               <li className="mb-2">
+                <Link to="/farmer/payments-method" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
+              </li>
               <li className="mb-2">
                 <Link to="/farmer/todays-payments" className="text-gray-600 hover:text-blue-600">Todays Payments</Link>
               </li>
               <li className="mb-2">
-                <Link to="/farmer/payments-method" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
+                <Link to="#" className="text-gray-600 hover:text-blue-600">Pending Payments</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Pending Payments</Link>
+                <Link to="#" className="text-gray-600 hover:text-blue-600">WithDraw</Link>
               </li>
             </ul>
           )}
