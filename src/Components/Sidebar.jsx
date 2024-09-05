@@ -113,14 +113,9 @@ const Sidebar = () => {
           {dropdownStates.settings && (
             <ul className="mt-2 ml-4">
               <li className="mb-2">
-                <a href="#" className="text-gray-600">Profile Settings</a>
+                <a href="#" className="text-gray-600">My Profile</a>
               </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-600">Account Security</a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-600">Notification Preferences</a>
-              </li>
+           
             </ul>
           )}
         </li>
