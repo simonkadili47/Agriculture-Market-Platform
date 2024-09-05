@@ -100,7 +100,7 @@ const Sidebar = () => {
                 <Link to="/farmer/todays-payments" className="text-gray-600 hover:text-blue-600">Todays Payments</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 hover:text-blue-600">Pending Payments</Link>
+                <Link to="/farmer/pending-payments" className="text-gray-600 hover:text-blue-600">Pending Payments</Link>
               </li>
               <li className="mb-2">
                 <Link to="#" className="text-gray-600 hover:text-blue-600">WithDraw</Link>

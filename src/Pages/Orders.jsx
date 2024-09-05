@@ -11,7 +11,7 @@ const Orders = () => {
         <Sidebar />
         <main className="flex-1 p-4">
             <h1 className='text-xl font-bold'>Orders</h1>
-         <div className='mt-12 ml-8 '>
+         <div className='mt-12 ml-0 '>
          <OrdersTable />
          </div>
         </main>
