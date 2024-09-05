@@ -2,17 +2,17 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'Order ID', width: 100, editable: true },
-  { field: 'Productname', headerName: 'Product Name', width: 120, editable: true },
-  { field: 'Buyername', headerName: 'Buyer Name', width: 160, editable: true },
-  { field: 'Quantity', headerName: 'Quantity', width: 200, editable: true },
-  { field: 'Totalamounts', headerName: 'Total Amounts', width: 160, editable: true },
-  { field: 'Orderdate', headerName: 'Order Date', width: 140, editable: true },
-  { field: 'Paymentduedate', headerName: 'Payment Due Date', width: 140, editable: true },
+  { field: 'id', headerName: ' ID', width: 100, editable: true },
+  { field: 'product_name', headerName: 'Product Name', width: 120, editable: true },
+  { field: 'buyer_name', headerName: 'Buyer Name', width: 160, editable: true },
+  { field: 'quantity', headerName: 'Quantity', width: 200, editable: true },
+  { field: 'total_amounts', headerName: 'Total Amounts', width: 160, editable: true },
+  { field: 'order_date', headerName: 'Order Date', width: 140, editable: true },
+  { field: 'payment_due_date', headerName: 'Payment Due Date', width: 140, editable: true },
 ];
 
 const rows = [
-  { id: 1, Productname: 'Maharage', Buyername: 'John James', Quantity: '5kg', Totalamounts: '100000', Orderdate: '30-08-2024',Paymentduedate:'30-0802024' },
+  { id: 1, product_name: 'Maharage', buyer_name: 'John James', quantity: '5kg', total_amounts: '100000', order_date: '30-08-2024',payment_due_date:'30-0802024' },
 
 ];
 

@@ -4,6 +4,7 @@ import Sidebar from '../Components/Sidebar';
 
 const AddProducts = () => {
   const [formData, setFormData] = useState({
+    farmer_name: '',
     product_name: '',
     category_id: '',
     selling_price: '',
@@ -47,6 +48,7 @@ const AddProducts = () => {
     }
 
     setFormData({
+      farmer_name: '',
       product_name: '',
       category_id: '',
       selling_price: '',
@@ -68,6 +70,19 @@ const AddProducts = () => {
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Add New Product</h2>
             <div className="bg-white shadow-lg rounded-lg border border-gray-200 p-4">
               <form onSubmit={handleSubmit} className="flex flex-wrap -mx-2">
+                {/* farmer name */}
+                <div className="w-full sm:w-1/3 px-2 mb-4">
+                  <label htmlFor="farmer_name" className="block text-gray-700 font-medium mb-1 text-sm">Farmer Name</label>
+                  <input
+                    type="text"
+                    id="farmer_name"
+                    name="farmer_name"
+                    value={formData.farmer_name}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-1 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                </div>
                 {/* Product Name */}
                 <div className="w-full sm:w-1/3 px-2 mb-4">
                   <label htmlFor="product_name" className="block text-gray-700 font-medium mb-1 text-sm">Product Name</label>
