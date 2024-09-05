@@ -3,15 +3,16 @@ import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
   { field: 'id', headerName: 'Transaction ID', minWidth: 150, headerAlign: 'center', align: 'center' },
-  { field: 'Buyername', headerName: 'Buyer Name', minWidth: 180, headerAlign: 'center', align: 'center' },
+  { field: 'Buyer_name', headerName: 'Buyer Name', minWidth: 180, headerAlign: 'center', align: 'center' },
+  { field: 'Product_name', headerName: 'Product Name', minWidth: 180, headerAlign: 'center', align: 'center' },
   { field: 'Quantity', headerName: 'Quantity', minWidth: 120, headerAlign: 'center', align: 'center' },
-  { field: 'Amountpaid', headerName: 'Amount Paid', minWidth: 150, headerAlign: 'center', align: 'center' },
-  { field: 'Paymentmethod', headerName: 'Payment Method', minWidth: 150, headerAlign: 'center', align: 'center' },
-  { field: 'Date', headerName: 'Date', minWidth: 120, headerAlign: 'center', align: 'center' },
+  { field: 'Amount_paid', headerName: 'Amount Paid', minWidth: 150, headerAlign: 'center', align: 'center' },
+  { field: 'Payment_method', headerName: 'Payment Method', minWidth: 150, headerAlign: 'center', align: 'center' },
+  { field: 'Payment_date', headerName: 'Date', minWidth: 120, headerAlign: 'center', align: 'center' },
 ];
 
 const rows = [
-  { id: 1, Buyername: 'James John', Quantity: 5, Amountpaid: 10000, Paymentmethod: 'Mpesa', Date: '30-08-2024' },
+  { id: 1, Buyer_name: 'James John', Product_name: 'Maharage', Quantity: 5, Amount_paid: 10000, Payment_method: 'Mpesa', Payment_date: '30-08-2024' },
 ];
 
 export default function TodaysPaymentsTable() {
