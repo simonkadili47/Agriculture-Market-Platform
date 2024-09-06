@@ -1,11 +1,11 @@
 import React from 'react'
 import Theme from './Theme';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom'; 
 import Login from './Login'
 import Register from './Register';
 import Dashboardf from './Farmer Dashboard/FarmerDashboard';
-import Dashboardb from './Buyer Dashboard/Dashboardb';
+import Dashboardb from './Buyer Dashboard/BuyerDashboard';
 import AdiminDashboard from './Main dashboard/Admin_Dashboard';
 
 import AddProducts from './Pages/AddProducts';
@@ -25,12 +25,14 @@ import PendingPayments from './Pages/PendingPayments';
 const App = () => {
   return (
     <div className="font-outfit" >
-    
+      
       <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+
         <Route path='login' element = {<Login/>}/>
         <Route path='register' element = {<Register/>}/>
-        <Route path = '/Farmer-dashboard' element ={<Dashboardf/>}/>
-        <Route path = 'dashboardb' element ={<Dashboardb/>}/>
+        <Route path = '/Farmer-Dashboard' element ={<Dashboardf/>}/>
+        <Route path = '/Buyer-Dashboard' element ={<Dashboardb/>}/>
         <Route path = 'AdminDashboard' element ={<AdiminDashboard/>}/>
         <Route path = '/farmer/add-product' element ={<AddProducts/>}/>
         <Route path = '/farmer/view-product' element ={<ViewProduct/>}/>
