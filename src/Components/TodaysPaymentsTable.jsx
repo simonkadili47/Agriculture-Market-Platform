@@ -2,13 +2,13 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'Transaction ID', minWidth: 150, headerAlign: 'center', align: 'center' },
-  { field: 'buyer_name', headerName: 'Buyer Name', minWidth: 180, headerAlign: 'center', align: 'center' },
-  { field: 'product_name', headerName: 'Product Name', minWidth: 180, headerAlign: 'center', align: 'center' },
-  { field: 'quantity', headerName: 'Quantity', minWidth: 120, headerAlign: 'center', align: 'center' },
-  { field: 'amount_paid', headerName: 'Amount Paid', minWidth: 150, headerAlign: 'center', align: 'center' },
-  { field: 'payment_method', headerName: 'Payment Method', minWidth: 150, headerAlign: 'center', align: 'center' },
-  { field: 'payment_date', headerName: 'Payment Date', minWidth: 120, headerAlign: 'center', align: 'center' },
+  { field: 'id', headerName: 'Transaction ID', width: 120, headerAlign: 'center', align: 'center' },
+  { field: 'buyer_name', headerName: 'Buyer Name', width: 160, headerAlign: 'center', align: 'center' },
+  { field: 'product_name', headerName: 'Product Name', width: 160, headerAlign: 'center', align: 'center' },
+  { field: 'quantity', headerName: 'Quantity', width: 100, headerAlign: 'center', align: 'center' },
+  { field: 'amount_paid', headerName: 'Amount Paid', width: 120, headerAlign: 'center', align: 'center' },
+  { field: 'payment_method', headerName: 'Payment Method', width: 120, headerAlign: 'center', align: 'center' },
+  { field: 'payment_date', headerName: 'Payment Date', width: 100, headerAlign: 'center', align: 'center' },
 ];
 
 const rows = [
@@ -34,12 +34,16 @@ export default function TodaysPaymentsTable() {
         sx={{ 
           '& .MuiDataGrid-columnHeaders': {
             textAlign: 'center',
+            // Ensure headers don't overflow and are fully visible
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
           },
           '& .MuiDataGrid-cell': {
             textAlign: 'center',
-          },
-          '& .MuiDataGrid-cellContent': {
-            overflow: 'visible',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
           },
         }}
       />

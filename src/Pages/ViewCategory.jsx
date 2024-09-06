@@ -5,22 +5,25 @@ import CategoryTable from '../Components/CategoryTable';
 
 const ViewCategory = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col mt-20 min-h-screen bg-gray-100">
       <Header />
       <div className="flex flex-1">
         <Sidebar />
-        <div className="flex-1 p-4">
-          {/* Flex container to align the heading and button */}
-          <div className="flex justify-between items-center mt-4 ml-4 mr-4">
-            <h1 className="text-xl font-bold text-black">View All Products</h1>
-            <button className="p-3 bg-green-600 text-white rounded-lg">
-              <a href="/farmer/add-category">Add Category</a>
-            </button>
+        <main className="flex-1 p-4 ml-64"> {/* Adjust ml-64 to the width of your sidebar */}
+          {/* Container for heading and button */}
+          <div className="mb-6">
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="text-xl font-bold ml-4 text-black">View All Categories</h1>
+              <button className="p-3 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                <a href="/farmer/add-category">Add Category</a>
+              </button>
+            </div>
           </div>
-          <div className="mt-6 mr-16 ml-8"> 
-            <CategoryTable/>
+          {/* Table container */}
+          <div className="overflow-x-auto">
+            <CategoryTable />
           </div>
-        </div>
+        </main>
       </div>
     </div>
   );

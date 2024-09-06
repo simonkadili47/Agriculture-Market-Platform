@@ -62,16 +62,22 @@ const AddProducts = () => {
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
 
-      <div className="flex flex-1">
+      <div className="flex flex-1 pt-16">
         <Sidebar />
 
         <main className="flex-1 p-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">Add New Product</h2>
-            <div className="bg-white shadow-lg rounded-lg border border-gray-200 p-4">
+          {/* Container for Heading and Form */}
+          <div className="w-full max-w-lg mx-auto">
+            {/* Heading */}
+            <div className="mb-8 mt-2">
+              <h1 className="text-3xl font-semibold text-gray-800">Add New Product</h1>
+            </div>
+
+            {/* Form */}
+            <div className="bg-white shadow-lg rounded-lg border border-gray-200 p-6">
               <form onSubmit={handleSubmit} className="flex flex-wrap -mx-2">
-                {/* farmer name */}
-                <div className="w-full sm:w-1/3 px-2 mb-4">
+                {/* Farmer Name */}
+                <div className="w-full sm:w-1/2 px-2 mb-4">
                   <label htmlFor="farmer_name" className="block text-gray-700 font-medium mb-1 text-sm">Farmer Name</label>
                   <input
                     type="text"
@@ -83,8 +89,9 @@ const AddProducts = () => {
                     required
                   />
                 </div>
+
                 {/* Product Name */}
-                <div className="w-full sm:w-1/3 px-2 mb-4">
+                <div className="w-full sm:w-1/2 px-2 mb-4">
                   <label htmlFor="product_name" className="block text-gray-700 font-medium mb-1 text-sm">Product Name</label>
                   <input
                     type="text"
@@ -98,7 +105,7 @@ const AddProducts = () => {
                 </div>
 
                 {/* Product Category */}
-                <div className="w-full sm:w-1/3 px-2 mb-4">
+                <div className="w-full sm:w-1/2 px-2 mb-4">
                   <label htmlFor="category_id" className="block text-gray-700 font-medium mb-1 text-sm">Product Category</label>
                   <select
                     id="category_id"
@@ -107,6 +114,7 @@ const AddProducts = () => {
                     onChange={handleInputChange}
                     className="w-full px-3 py-1 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
+                    <option value="">Select a category</option>
                     <option value="Maize">Maize</option>
                     <option value="Cassava">Cassava</option>
                     <option value="Pineapple">Pineapple</option>
@@ -114,7 +122,7 @@ const AddProducts = () => {
                 </div>
 
                 {/* Selling Price */}
-                <div className="w-full sm:w-1/3 px-2 mb-4">
+                <div className="w-full sm:w-1/2 px-2 mb-4">
                   <label htmlFor="selling_price" className="block text-gray-700 font-medium mb-1 text-sm">Selling Price</label>
                   <input
                     type="number"
@@ -128,7 +136,7 @@ const AddProducts = () => {
                 </div>
 
                 {/* Quantity */}
-                <div className="w-full sm:w-1/3 px-2 mb-4">
+                <div className="w-full sm:w-1/2 px-2 mb-4">
                   <label htmlFor="quantity" className="block text-gray-700 font-medium mb-1 text-sm">Quantity</label>
                   <input
                     type="number"
@@ -142,13 +150,12 @@ const AddProducts = () => {
                 </div>
 
                 {/* Product Image */}
-                <div className="w-full sm:w-1/3 px-2 mb-4">
+                <div className="w-full sm:w-1/2 px-2 mb-4">
                   <label htmlFor="product_image" className="block text-gray-700 font-medium mb-1 text-sm">Product Image</label>
                   <input
                     type="file"
                     id="product_image"
                     name="product_image"
-                    value={formData.product_image}
                     onChange={handleInputChange}
                     className="w-full px-3 py-1 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required

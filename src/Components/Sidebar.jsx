@@ -24,7 +24,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-1/5 h-screen bg-white p-6 ">
+    <div className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-1/5 bg-white p-6 overflow-y-auto">
       <ul>
         <li className="bg-orange-400 p-3 px-4 rounded-lg inline-flex items-center">
           <Link to="/Farmer-dashboard" className="flex items-center text-gray-700 hover:text-blue-600">
@@ -56,17 +56,10 @@ const Sidebar = () => {
           )}
         </li>
         <li className="mb-6">
-          <div className="flex items-center text-gray-700 cursor-pointer" >
+          <div className="flex items-center text-gray-700 cursor-pointer">
             <RxBorderSplit className="mr-2 text-xl" />
-            <ul>
-            <li className="mb-2">
-            <Link to="/Farmer/orders" className="text-gray-600 hover:text-blue-600"> Orders</Link>
-
-              </li>
-              </ul>
-            
+            <Link to="/Farmer/orders" className="text-gray-600 hover:text-blue-600">Orders</Link>
           </div>
-        
         </li>
         <li className="mb-6">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('marketTrends')}>
@@ -79,7 +72,6 @@ const Sidebar = () => {
               <li className="mb-2">
                 <Link to="/farmer/CurrentTrends" className="text-gray-600 hover:text-blue-600">Current Trends</Link>
               </li>
-              
             </ul>
           )}
         </li>
@@ -91,21 +83,20 @@ const Sidebar = () => {
           </div>
           {dropdownStates.payments && (
             <ul className="mt-2 ml-4">
-               <li className="mb-2">
+              <li className="mb-2">
                 <Link to="/farmer/payments-method" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
               </li>
               <li className="mb-2">
-                <Link to="/farmer/todays-payments" className="text-gray-600 hover:text-blue-600">Todays Payments</Link>
+                <Link to="/farmer/todays-payments" className="text-gray-600 hover:text-blue-600">Today's Payments</Link>
               </li>
               <li className="mb-2">
                 <Link to="/farmer/pending-payments" className="text-gray-600 hover:text-blue-600">Pending Payments</Link>
               </li>
-             
             </ul>
           )}
         </li>
         <li className="mb-6">
-          <div className="flex justify-between items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('settings')}>
+          <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('settings')}>
             <IoSettingsOutline className='mr-2 text-xl' />
             <span className='flex-grow'>Settings</span>
             {dropdownStates.settings ? <FaChevronUp /> : <FaChevronDown />}
@@ -115,11 +106,10 @@ const Sidebar = () => {
               <li className="mb-2">
                 <a href="#" className="text-gray-600">My Profile</a>
               </li>
-           
             </ul>
           )}
         </li>
-      </ul>
+      </ul> 
     </div>
   );
 };

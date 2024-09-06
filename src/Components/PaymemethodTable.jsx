@@ -3,14 +3,14 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
 
 const columns = [
-    { field: 'id', headerName: 'Payment ID', width: 100 },
-  { field: 'Paymentmethod', headerName: 'Payment Method', width: 180, editable: true },
-  { field: 'Accountnumber', headerName: 'Account Number', width: 180, editable: true },
-  { field: 'Accountname', headerName: 'Account Name', width: 180, editable: true },
+  { field: 'id', headerName: 'Payment ID', width: 80 },
+  { field: 'Paymentmethod', headerName: 'Payment Method', width: 150, editable: true },
+  { field: 'Accountnumber', headerName: 'Account Number', width: 150, editable: true },
+  { field: 'Accountname', headerName: 'Account Name', width: 150, editable: true },
   {
     field: 'actions',
     headerName: 'Actions',
-    width: 160,
+    width: 140,
     sortable: false,
     renderCell: (params) => (
       <div>
@@ -20,7 +20,7 @@ const columns = [
           sx={{
             backgroundColor: 'green',
             color: 'white',
-            minWidth: '70px',
+            minWidth: '60px',
             padding: '4px 8px',
             marginRight: 1,
             fontSize: '0.75rem',
@@ -35,7 +35,7 @@ const columns = [
           color="error"
           size="small"
           sx={{
-            minWidth: '70px',
+            minWidth: '60px',
             padding: '4px 8px',
             fontSize: '0.75rem',
           }}
@@ -66,7 +66,7 @@ function handleDelete(id) {
 
 export default function PaymentmethodTable() {
   return (
-    <div style={{ height: 350, width: '90%', margin: '20px auto', overflowX: 'auto' }}>
+    <div style={{ height: 350, width: '90%', margin: '20px auto' }}>
       <DataGrid
         rows={rows}
         columns={columns}

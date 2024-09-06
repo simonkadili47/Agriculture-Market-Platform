@@ -3,44 +3,54 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'id', headerName: 'ID', width: 50 },
   {
     field: 'Productname',
-    headerName: 'Product name',
-    width: 150,
+    headerName: 'Product Name',
+    width: 120,
     editable: true,
+    renderCell: (params) => (
+      <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        {params.value}
+      </div>
+    ),
   },
   {
     field: 'Productcategory',
-    headerName: 'Product category',
-    width: 150,
+    headerName: 'Category',
+    width: 120,
     editable: true,
+    renderCell: (params) => (
+      <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        {params.value}
+      </div>
+    ),
   },
   {
     field: 'Sellingprice',
-    headerName: 'Selling price',
+    headerName: 'Price',
     type: 'number',
-    width: 110,
+    width: 90,
     editable: true,
   },
   {
     field: 'Quantity',
-    headerName: 'Quantity',
+    headerName: 'Qty',
     type: 'number',
-    width: 110,
+    width: 80,
     editable: true,
   },
   {
     field: 'Productimage',
-    headerName: 'Product image',
+    headerName: 'Image',
     type: 'file',
-    width: 110,
+    width: 100,
     editable: true,
   },
   {
     field: 'Productdescription',
-    headerName: 'Product description',
-    width: 200,
+    headerName: 'Description',
+    width: 180,
     editable: true,
     renderCell: (params) => (
       <div style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
@@ -94,8 +104,7 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'very nice rice' },
- 
+  { id: 1, Productname: 'Rice', Productcategory: 'Mbeya', Sellingprice: '1000', Quantity: '10', Productimage: '', Productdescription: 'Very nice rice' },
 ];
 
 const handleEdit = (id) => {
@@ -124,6 +133,22 @@ export default function ProductTable() {
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
+        sx={{ 
+          '& .MuiDataGrid-columnHeaders': { 
+            whiteSpace: 'nowrap',
+          },
+          '& .MuiDataGrid-cell': {
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          },
+          '& .MuiDataGrid-root': {
+            overflow: 'hidden',
+          },
+          '& .MuiDataGrid-virtualScroller': {
+            overflow: 'hidden',
+          },
+        }}
       />
     </div>
   );

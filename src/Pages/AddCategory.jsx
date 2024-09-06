@@ -55,9 +55,9 @@ const AddCategory = () => {
       <div className="flex flex-1">
         <Sidebar />
 
-        <main className="flex-1 p-4 flex items-start justify-center">
-          <div className="max-w-xl w-full">
-            <h1 className="text-2xl font-semibold text-gray-800 mb-6">Add New Category</h1>
+        <main className="flex-1 p-4 flex items-center justify-center">
+          <div className="w-full max-w-lg">
+            <h1 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Add New Category</h1>
             <div className="bg-white shadow-lg rounded-lg border border-gray-200 p-6 flex flex-col">
               <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
                 {/* Category Name */}
