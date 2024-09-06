@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { FaUser } from 'react-icons/fa'; 
 import { IoIosNotifications } from 'react-icons/io';
@@ -31,7 +30,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="w-full bg-white border border-gray-200 text-gray-800 p-3 flex  justify-between items-center">
+        <div className="fixed top-0 left-0 right-0 bg-white border border-gray-200 text-gray-800 p-3 flex justify-between items-center z-50">
             <div className="flex items-center space-x-4">
                 <img src={logo} alt="Agriculture Logo" className="w-14 h-14 object-cover" />
                 <p className="text-xl font-bold">AGRICULTURE PLATFORM</p>
@@ -57,7 +56,6 @@ const Header = () => {
                                     <p className="text-sm text-gray-500">{user.role}</p>
                                 </div>
                             </div>
-                            {/* <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">My Profile</a> */}
                             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
                         </div>
                     )}

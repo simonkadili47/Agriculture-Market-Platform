@@ -8,7 +8,7 @@ import { MdPayments } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
-const BuyerDashboard = () => {
+const Sidebar = () => {
   const [dropdownStates, setDropdownStates] = useState({
     myProducts: false,
     orders: false,
@@ -24,10 +24,10 @@ const BuyerDashboard = () => {
   };
 
   return (
-    <div className="w-1/5 h-screen bg-white p-6 ">
+    <div className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-1/5 bg-white p-6 overflow-y-auto">
       <ul>
         <li className="bg-orange-400 p-3 px-4 rounded-lg inline-flex items-center">
-          <Link to="" className="flex items-center text-gray-700 hover:text-blue-600">
+          <Link to="/Buyer-Dashboard" className="flex items-center text-gray-700 hover:text-blue-600">
             <TfiDashboard className="mr-2 text-2xl" />
             <span>Dashboard</span>
           </Link>
@@ -41,50 +41,42 @@ const BuyerDashboard = () => {
           {dropdownStates.myProducts && (
             <ul className="mt-2 ml-4">
               <li className="mb-2">
-                <Link to="" className="text-gray-600 hover:text-blue-600">Available Products</Link>
+                <Link to="/buyer/available-products" className="text-gray-600 hover:text-blue-600">Available Products</Link>
               </li>
-             
             </ul>
           )}
         </li>
         <li className="mb-6">
-        <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('orders')}>
-        <RxBorderSplit className="mr-2 text-xl" />
-          <span className="flex-grow">My Orders</span>
-          {dropdownStates.orders ? <FaChevronUp /> : <FaChevronDown />}
-        </div>
-        {dropdownStates.orders&& (
-          <ul className="mt-2 ml-4">
-            <li className="mb-2">
-              <Link to="" className="text-gray-600 hover:text-blue-600">Current Orders</Link>
-            </li>
-            
-          </ul>
-        )}
-      </li>
-      <li className="mb-6">
-        <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('payments')}>
-          <MdPayments className="mr-2 text-xl" />
-          <span className="flex-grow">Payments</span>
-          {dropdownStates.payments ? <FaChevronUp /> : <FaChevronDown />}
-        </div>
-        {dropdownStates.payments && (
-          <ul className="mt-2 ml-4">
-             <li className="mb-2">
-              <Link to="" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
-            </li>
-            <li className="mb-2">
-              <Link to="" className="text-gray-600 hover:text-blue-600">Paid Payments</Link>
-            </li>
-          
-           
-          </ul>
-        )}
-      </li>
-        
-       
-       
-        
+          <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('orders')}>
+            <RxBorderSplit className="mr-2 text-xl" />
+            <span className="flex-grow">My Orders</span>
+            {dropdownStates.orders ? <FaChevronUp /> : <FaChevronDown />}
+          </div>
+          {dropdownStates.orders && (
+            <ul className="mt-2 ml-4">
+              <li className="mb-2">
+                <Link to="" className="text-gray-600 hover:text-blue-600">Current Orders</Link>
+              </li>
+            </ul>
+          )}
+        </li>
+        <li className="mb-6">
+          <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('payments')}>
+            <MdPayments className="mr-2 text-xl" />
+            <span className="flex-grow">Payments</span>
+            {dropdownStates.payments ? <FaChevronUp /> : <FaChevronDown />}
+          </div>
+          {dropdownStates.payments && (
+            <ul className="mt-2 ml-4">
+              <li className="mb-2">
+                <Link to="" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="" className="text-gray-600 hover:text-blue-600">Paid Payments</Link>
+              </li>
+            </ul>
+          )}
+        </li>
         <li className="mb-6">
           <div className="flex justify-between items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('settings')}>
             <IoSettingsOutline className='mr-2 text-xl' />
@@ -96,7 +88,6 @@ const BuyerDashboard = () => {
               <li className="mb-2">
                 <a href="#" className="text-gray-600">My Profile</a>
               </li>
-           
             </ul>
           )}
         </li>
@@ -105,4 +96,4 @@ const BuyerDashboard = () => {
   );
 };
 
-export default BuyerDashboard;
+export default Sidebar;

@@ -18,6 +18,7 @@ import TodaysPayments from './Pages/TodaysPayments';
 import PaymentsMethod from './Pages/PaymentsMethod';
 import AddPaymentmethod from './Pages/AddPaymentmethod';
 import PendingPayments from './Pages/PendingPayments';
+import AvailableProducts from './Pages/AvailableProducts';
 
 
 
@@ -44,6 +45,7 @@ const App = () => {
         <Route path = '/farmer/payments-method' element ={<PaymentsMethod/>}/>
         <Route path = '/farmer/add-payment-method' element ={<AddPaymentmethod/>}/>
         <Route path = '/farmer/pending-payments' element ={<PendingPayments/>}/>
+        <Route path = '/buyer/available-products' element ={<AvailableProducts/>}/>
         
        
       </Routes>
