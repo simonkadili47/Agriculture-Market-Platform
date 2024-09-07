@@ -4,7 +4,7 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 
 const DashboardCards = () => {
   return (
-    <div className="pt-20 flex justify-center  ml-28 mt-3 px-4"> {/* Use justify-end to align to the right */}
+    <div className="pt-20 flex justify-center  ml-28 mt-3 px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl w-full">
         <div className="bg-white p-4 rounded-lg shadow-lg">
           <h3 className="text-lg font-semibold flex items-center space-x-2">

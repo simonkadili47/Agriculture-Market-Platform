@@ -15,7 +15,7 @@ const columns = [
 
 const rows = [
   { id: 1, Buyer_name: 'John Ilomo', Product_name: 'Maharage', Quantity: '5kg', Total_amounts: '100000', Payment_status: 'paid', Payment_method: 'Mpesa', Order_status: 'Shipping', Order_date: '30-08-2024' },
-  // Add more rows as needed
+  
 ];
 
 export default function OrdersTable() {
@@ -24,7 +24,7 @@ export default function OrdersTable() {
       <DataGrid
         rows={rows}
         columns={columns}
-        pageSize={5} // Adjust page size as needed
+        pageSize={5} 
         checkboxSelection
         disableRowSelectionOnClick
         sx={{ 

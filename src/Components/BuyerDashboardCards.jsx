@@ -4,8 +4,8 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 
 const BuyerDashboardCards = () => {
   return (
-    <div className="flex justify-end mt-24"> {/* Flexbox for aligning the grid to the right */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-5xl"> {/* Reducing width with max-w-5xl */}
+    <div className="flex justify-end mt-24">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-5xl">
         
         <div className="bg-white p-4 rounded-lg shadow-lg">
           <h3 className="text-lg font-semibold flex items-center"><AiFillProduct className="mr-2" /> Total Products</h3>

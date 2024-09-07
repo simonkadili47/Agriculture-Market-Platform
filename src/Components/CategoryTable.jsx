@@ -22,7 +22,7 @@ const columns = [
         </Button>
         <Button
           variant="contained"
-          color="error" // MUI provides a built-in 'error' color variant which is red
+          color="error" 
           size="small"
           onClick={() => handleDelete(params.row.id)}
         >
