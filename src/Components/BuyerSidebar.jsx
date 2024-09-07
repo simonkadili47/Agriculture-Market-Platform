@@ -8,7 +8,7 @@ import { MdPayments } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+const BuyerSidebar = () => {
   const [dropdownStates, setDropdownStates] = useState({
     myProducts: false,
     orders: false,
@@ -55,7 +55,7 @@ const Sidebar = () => {
           {dropdownStates.orders && (
             <ul className="mt-2 ml-4">
               <li className="mb-2">
-                <Link to="" className="text-gray-600 hover:text-blue-600">Current Orders</Link>
+                <Link to="/buyer/current-orders" className="text-gray-600 hover:text-blue-600">Current Order</Link>
               </li>
             </ul>
           )}
@@ -96,4 +96,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default BuyerSidebar;
