@@ -3,14 +3,14 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
 
 const columns = [
-  { field: 'id', headerName: 'Payment ID', width: 80 },
-  { field: 'Paymentmethod', headerName: 'Payment Method', width: 150, editable: true },
-  { field: 'Accountnumber', headerName: 'Account Number', width: 150, editable: true },
-  { field: 'Accountname', headerName: 'Account Name', width: 150, editable: true },
+  { field: 'id', headerName: 'Payment ID', width: 100 }, // Increased width to make sure it's fully visible
+  { field: 'Paymentmethod', headerName: 'Payment Method', width: 160, editable: true },
+  { field: 'Accountnumber', headerName: 'Account Number', width: 170, editable: true },
+  { field: 'Accountname', headerName: 'Account Name', width: 160, editable: true },
   {
     field: 'actions',
     headerName: 'Actions',
-    width: 140,
+    width: 150, // Slightly increased to accommodate both buttons
     sortable: false,
     renderCell: (params) => (
       <div>
@@ -51,7 +51,7 @@ const columns = [
 const rows = [
   { id: 1, Paymentmethod: 'Mpesa', Accountnumber: '252760', Accountname: 'Simon Kadili' },
   { id: 2, Paymentmethod: 'Tigopesa', Accountnumber: '252760', Accountname: 'Simon Kadili' },
-  { id: 3, Paymentmethod: 'CRDB Bank', Accountnumber: '0152483265100', Accountname: 'Simon Kadili' }
+  { id: 3, Paymentmethod: 'CRDB Bank', Accountnumber: '0152483265100', Accountname: 'Simon Kadili' },
 ];
 
 function handleEdit(id) {
@@ -80,6 +80,17 @@ export default function PaymentmethodTable() {
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
+        sx={{
+          '& .MuiDataGrid-columnHeaderTitle': {
+            whiteSpace: 'normal', // Allow the header text to wrap if it's too long
+            lineHeight: '1.2', // Set line height for better readability
+            textAlign: 'center', // Center the header text
+          },
+          '& .MuiDataGrid-columnHeaders': {
+            textAlign: 'center',
+            backgroundColor: '#f5f5f5',
+          },
+        }}
       />
     </div>
   );

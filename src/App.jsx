@@ -20,6 +20,8 @@ import PendingPayments from './Pages/PendingPayments';
 import Dashboardb from './Buyer Dashboard/BuyerDashboard';
 import AvailableProducts from './Pages/AvailableProducts';
 import CurrentOrders from './Pages/CurrentOrders';
+import BuyerPayment from './Pages/BuyerPayment';
+import BuyerPaidPayment from './Pages/BuyersPaidPayment';
 
 // Admin Dashboard
 import AdiminDashboard from './Main dashboard/Admin_Dashboard';
@@ -52,6 +54,8 @@ const App = () => {
         <Route path="/Buyer-Dashboard" element={<Dashboardb />} />
         <Route path="/buyer/available-products" element={<AvailableProducts />} />
         <Route path="/buyer/current-orders" element={<CurrentOrders />} />
+        <Route path="/buyer/payments-method" element={<BuyerPayment/>} />
+        <Route path="/buyer/paid-payments" element={<BuyerPaidPayment/>} />
 
         {/* Admin Dashboard Route */}
         <Route path="/AdminDashboard" element={<AdiminDashboard />} />

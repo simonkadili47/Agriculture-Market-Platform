@@ -55,7 +55,7 @@ const BuyerSidebar = () => {
           {dropdownStates.orders && (
             <ul className="mt-2 ml-4">
               <li className="mb-2">
-                <Link to="/buyer/current-orders" className="text-gray-600 hover:text-blue-600">Current Order</Link>
+                <Link to="/buyer/current-orders" className="text-gray-600 hover:text-blue-600">Current Orders</Link>
               </li>
             </ul>
           )}
@@ -69,10 +69,10 @@ const BuyerSidebar = () => {
           {dropdownStates.payments && (
             <ul className="mt-2 ml-4">
               <li className="mb-2">
-                <Link to="" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
+                <Link to="/buyer/payments-method" className="text-gray-600 hover:text-blue-600">Payment Methods</Link>
               </li>
               <li className="mb-2">
-                <Link to="" className="text-gray-600 hover:text-blue-600">Paid Payments</Link>
+                <Link to="/buyer/paid-payments" className="text-gray-600 hover:text-blue-600">Paid Payments</Link>
               </li>
             </ul>
           )}
