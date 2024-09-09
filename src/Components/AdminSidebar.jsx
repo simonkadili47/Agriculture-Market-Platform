@@ -1,19 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FaUser } from 'react-icons/fa'; 
-import { IoIosNotifications } from 'react-icons/io';
+import React, { useState, useEffect, useRef } from 'react'; 
 import { TfiDashboard } from "react-icons/tfi"; 
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; 
 import { AiFillProduct } from "react-icons/ai";
 import { RxBorderSplit } from "react-icons/rx";
 import { SiMarketo } from "react-icons/si";
 import { IoSettingsOutline } from "react-icons/io5";
-import { FaMoneyBillAlt } from "react-icons/fa";
 import { MdOutlinePayments } from "react-icons/md";
 import { GrUserManager } from "react-icons/gr";
 import { HiOutlineDocumentReport } from "react-icons/hi";
-import logo from '../assets/agriculture.webp'
 
-const AdiminDashboard = () => {
+
+const AdiminSidebar = () => {
   const [dropdownStates, setDropdownStates] = useState({
     usermanagement: false,
     productmanagement: false,
@@ -55,45 +52,7 @@ const AdiminDashboard = () => {
 
   return (
     <div>
-       <div className="w-full bg-white border border-gray-200 text-gray-800 p-3 flex justify-between items-center">
-        <div className="flex items-center space-x-4">
-          <img src={logo} alt="Agriculture Logo" className="w-14 h-14 object-cover" />
-          <p className="text-xl font-bold">AGRICULTURE PLATFORM</p>
-          
-         
-        </div>
-
-        <div className="flex items-center space-x-4">
-          <IoIosNotifications size={32} className='text-blue-600' />
-          
-          {/* User Icon with Dropdown */}
-          <div className="relative" ref={userMenuRef}>
-            <div 
-              className="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full cursor-pointer"
-              onClick={() => handleDropdownToggle('userMenu')}
-            >
-              <FaUser size={16} />
-            </div>
-            {dropdownStates.userMenu && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
-                <div className="flex items-center p-4 border-b border-gray-200">
-                  {/* Online Indicator */}
-                  <div className="relative mr-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full absolute top-0 right-0 border border-white" />
-                    <FaUser size={32} />
-                  </div>
-                  <div>
-                    <p className="font-semibold">{user.name}</p>
-                    <p className="text-sm text-gray-500">{user.role}</p>
-                  </div>
-                </div>
-                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
-                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
+      
 
       <div className="flex ">
         {/* Sidebar */}
@@ -103,7 +62,7 @@ const AdiminDashboard = () => {
                     <a href="/" className="text-gray-600">Dashboard</a>
                   </li>
           <ul className='mt-5'>
-            <li className="mb-6"> {/* Increased margin-bottom */}
+            <li className="mb-6"> 
               <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('usermanagement')}>
               <GrUserManager  className="mr-2 text-xl" />
                 <span className="flex-grow">User Management</span>
@@ -123,7 +82,7 @@ const AdiminDashboard = () => {
                 </ul>
               )}
             </li>
-            <li className="mb-6"> {/* Increased margin-bottom */}
+            <li className="mb-6">
               <div className="flex justify-between items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('productmanagement')}>
                 <RxBorderSplit className="mr-2 text-xl" />
                 <span className='flex-grow'>Product Management</span>
@@ -141,7 +100,7 @@ const AdiminDashboard = () => {
                 </ul>
               )}
             </li>
-            <li className="mb-6"> {/* Increased margin-bottom */}
+            <li className="mb-6"> 
               <div className="flex justify-between items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('ordermanagement')}>
                 <SiMarketo className='mr-2 text-xl' />
                 <span className='flex-grow'>Order Management</span>
@@ -156,7 +115,7 @@ const AdiminDashboard = () => {
                 </ul>
               )}
             </li>
-            <li className="mb-6"> {/* Increased margin-bottom */}
+            <li className="mb-6"> 
               <div className="flex justify-between items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('reports')}>
               <HiOutlineDocumentReport  className='mr-2 text-xl' />
                 <span className='flex-grow'>Reports</span>
@@ -213,29 +172,10 @@ const AdiminDashboard = () => {
           </ul>
         </div>
 
-        {/* Main Content Area */}
-        <div className="flex-grow p-7 bg-custom-gray">
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-           <h3 className="text-lg font-semibold"> <AiFillProduct/>Total Products</h3>
-              <p className="text-2xl font-bold">123</p> 
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-lg font-semibold"> <GrUserManager/>Total  Users</h3>
-              <p className="text-2xl font-bold">456</p> {/* Replace with dynamic value */}
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-            <FaMoneyBillAlt />
-              <h3 className="text-lg font-semibold ">Total Payments</h3>
-              <p className="text-2xl font-bold">$7890</p> {/* Replace with dynamic value */}
-            </div>
-          </div>
-
-          {/* Other content can go here */}
-        </div>
+      
       </div>
     </div>
   );
 };
 
-export default AdiminDashboard;
+export default AdiminSidebar;

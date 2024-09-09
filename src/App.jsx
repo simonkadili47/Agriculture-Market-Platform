@@ -24,7 +24,7 @@ import BuyerPayment from './Pages/BuyerPayment';
 import BuyerPaidPayment from './Pages/BuyersPaidPayment';
 
 // Admin Dashboard
-import AdiminDashboard from './Main dashboard/Admin_Dashboard';
+import AdiminDashboard from './Admin Dashboard/Admin_Dashboard'
 
 const App = () => {
   return (
