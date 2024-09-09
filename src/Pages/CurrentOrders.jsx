@@ -16,7 +16,7 @@ const CurrentOrders = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="w-full max-w-5xl"> {/* Adjust to max-w-3xl or any other value you need */}
+            <div className="w-full max-w-5xl"> 
              <CurrentOrdersTable/>
             </div>
           </div>

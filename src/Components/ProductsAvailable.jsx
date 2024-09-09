@@ -62,8 +62,8 @@ const ProductsAvailable = () => {
       
       // Close the modal and reset the form
       setShowModal(false);
-      setQuantity(1);  // Reset quantity
-      setPaymentMethod('');  // Reset payment method
+      setQuantity(1);  
+      setPaymentMethod('');  
     }
   };
 
@@ -107,7 +107,7 @@ const ProductsAvailable = () => {
             <div className="mb-4">
               <label className="block text-sm font-medium mb-2">Quantity</label>
               <input 
-                type="number" 
+                type="text" 
                 value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md"
