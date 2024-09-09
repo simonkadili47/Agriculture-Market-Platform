@@ -6,7 +6,7 @@ import { RxBorderSplit } from "react-icons/rx";
 import { SiMarketo } from "react-icons/si";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlinePayments } from "react-icons/md";
-import { GrUserManager } from "react-icons/gr";
+import { GrUserManager } from "react-icons/gr"; 
 import { HiOutlineDocumentReport } from "react-icons/hi";
 
 
@@ -59,7 +59,7 @@ const AdiminSidebar = () => {
         <div className="w-1/7 h-screen bg-white p-6 ">
         <li className="mb-2 bg-orange-400 p-3 px-4 rounded-lg inline-flex items-center">
         <TfiDashboard className="mr-2 text-2xl" />
-                    <a href="/" className="text-gray-600">Dashboard</a>
+                    <a href="/AdminDashboard" className="text-gray-600">Dashboard</a>
                   </li>
           <ul className='mt-5'>
             <li className="mb-6"> 
@@ -71,13 +71,11 @@ const AdiminSidebar = () => {
               {dropdownStates.usermanagement && (
                 <ul className="mt-2 ml-4">
                   <li className="mb-2">
-                    <a href="#" className="text-gray-600">Add Farmers</a>
+                    <a href="/Admin/add-users" className="text-gray-600">Add Users</a>
                   </li>
+                
                   <li className="mb-2">
-                    <a href="#" className="text-gray-600">Add Buyers</a>
-                  </li>
-                  <li className="mb-2">
-                    <a href="#" className="text-gray-600">View Users</a>
+                    <a href="/Admin/view-users" className="text-gray-600">View Users</a>
                   </li>
                 </ul>
               )}

@@ -25,6 +25,9 @@ import BuyerPaidPayment from './Pages/BuyersPaidPayment';
 
 // Admin Dashboard
 import AdiminDashboard from './Admin Dashboard/Admin_Dashboard'
+import AddUsers from './Pages/AddUsers';
+import ViewUsers from './Pages/ViewUsers'
+
 
 const App = () => {
   return (
@@ -57,8 +60,11 @@ const App = () => {
         <Route path="/buyer/payments-method" element={<BuyerPayment/>} />
         <Route path="/buyer/paid-payments" element={<BuyerPaidPayment/>} />
 
+
         {/* Admin Dashboard Route */}
         <Route path="/AdminDashboard" element={<AdiminDashboard />} />
+        <Route path="/Admin/add-users" element={<AddUsers/>} />
+        <Route path="/Admin/view-users" element={<ViewUsers/>} />
       </Routes>
     </div>
   );

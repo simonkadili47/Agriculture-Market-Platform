@@ -21,7 +21,7 @@ const ViewProduct = () => {
           </div>
           {/* Centered ProductTable */}
           <div className="flex justify-center">
-            <div className="w-full max-w-5xl"> {/* Adjust max-w-4xl to fit the space */}
+            <div className="w-full max-w-5xl"> 
               <ProductTable />
             </div>
           </div>

@@ -7,6 +7,20 @@ const Register = () => {
     <div className="w-full max-w-sm p-8 bg-white rounded-lg shadow-md">
       <h1 className="mb-6 text-2xl font-bold text-center text-gray-700">Register</h1>
       <form action="">
+
+      <div className="mb-4">
+          <label htmlFor="full_name" className="block mb-2  text-sm font-medium text-gray-600">
+             Full Name
+          </label>
+          <input
+            type="text"
+            id="full_name"
+            className="w-full px-3 py-2 text-sm text-gray-700 border rounded-lg focus:outline-none focus:border-indigo-500"
+            placeholder="Enter your Name "
+          />
+        </div>
+
+        
         
         <div className="mb-4">
           <label htmlFor="email" className="block mb-2  text-sm font-medium text-gray-600">
