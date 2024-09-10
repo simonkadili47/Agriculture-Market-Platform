@@ -107,7 +107,7 @@ const AdiminSidebar = () => {
               {dropdownStates.ordermanagement && (
                 <ul className="mt-2 ml-4">
                   <li className="mb-2">
-                    <a href="#" className="text-gray-600">Monitor Orders</a>
+                    <a href="/Admin/view-orders" className="text-gray-600">Monitor Orders</a>
                   </li>
                   
                 </ul>
