@@ -3,9 +3,16 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
 
 const columns = [
-  { field: 'id', headerName: 'Category ID', width: 120, editable: true },
-  { field: 'Categoryname', headerName: 'Category Name', width: 200, editable: true },
-  { field: 'Categorydescription', headerName: 'Category Description', width: 200, editable: true },
+    { field: 'id', headerName: 'Report ID', width: 80, editable: true },
+  { field: 'farmer_name', headerName: 'Farmer Name', width: 160, editable: true },
+  { field: 'product_name', headerName: 'Product Name', width: 160, editable: true },
+  { field: 'product_category', headerName: 'Product Category', width: 160, editable: true },
+  { field: 'quantity', headerName: 'Quantity', width: 160, editable: true },
+  { field: 'selling_price', headerName: 'Selling Price', width: 160, editable: true },
+  { field: 'total_amount', headerName: 'Total Amount', width: 160, editable: true },
+  { field: 'payment_status', headerName: 'Payment Status', width: 160, editable: true },
+  { field: 'payment_method', headerName: 'Payment Method', width: 160, editable: true },
+  { field: 'buyer_name', headerName: 'Buyer Name', width: 160, editable: true },
   {
     field: 'actions',
     headerName: 'Actions',
@@ -35,12 +42,8 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1, Categoryname: 'Potatoes', Categorydescription: 'Potatoes from Mbeya' },
-  { id: 2, Categoryname: 'Tomatoes', Categorydescription: 'Tomatoes from Arusha' },
-  { id: 3, Categoryname: 'Onions', Categorydescription: 'Onions from Dodoma' },
-  { id: 4, Categoryname: 'Carrots', Categorydescription: 'Carrots from Kilimanjaro' },
-  { id: 5, Categoryname: 'Cabbage', Categorydescription: 'Cabbage from Tanga' },
-  { id: 6, Categoryname: 'Spinach', Categorydescription: 'Spinach from Iringa' },
+  { id: 1, farmer_name: 'John Ilomo', product_name: 'Potatoes from Mbeya',product_category:'Mviringo', Quantity:'10kg', selling_price:'5000/kg', total_amount:'50000', payment_status:'pending', payment_method:'mpesa', buyer_name:'John Juma',  },
+  
 ];
 
 function handleEdit(id) {

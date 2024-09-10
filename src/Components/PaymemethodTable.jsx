@@ -66,7 +66,7 @@ function handleDelete(id) {
 
 export default function PaymentmethodTable() {
   return (
-    <div style={{ height: 350, width: '90%', margin: '20px auto' }}>
+    <div style={{ height: 350, width: '80%', margin: '20px auto' }}>
       <DataGrid
         rows={rows}
         columns={columns}

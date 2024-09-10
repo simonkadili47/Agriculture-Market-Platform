@@ -30,6 +30,7 @@ import ViewUsers from './Pages/ViewUsers'
 import AdminViewProduct from './Pages/AdminViewProduct';
 import AdminViewCategory from './Pages/AdminViewCategory'
 import AdminViewOrders from './Pages/AdminviewOrders'
+import SalesReport from './Pages/SalesReport';
 
 
 const App = () => {
@@ -71,6 +72,7 @@ const App = () => {
         <Route path="/Admin/view-products" element={<AdminViewProduct/>} />
         <Route path="/Admin/view-category" element={<AdminViewCategory/>} />
         <Route path="/Admin/view-orders" element={<AdminViewOrders/>} />
+        <Route path="/Admin/sales-report" element={<SalesReport/>} />
 
       </Routes>
     </div>

@@ -5,7 +5,7 @@ import ProductTable from '../Components/ProductTable';
 
 const AdminViewProduct = () => {
   return (
-    <div className="flex flex-col mt-20 min-h-screen bg-gray-100">
+    <div className="flex flex-col mt-20 min-h-screen bg-white">
       <Header />
       <div className="flex flex-1">
         <AdminSidebar/>

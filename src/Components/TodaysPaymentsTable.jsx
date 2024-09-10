@@ -4,7 +4,7 @@ import { TextField } from '@mui/material';
 
 const columns = [
   { field: 'id', headerName: 'Transaction ID', width: 120, headerAlign: 'center', align: 'center' },
-  { field: 'buyer_name', headerName: 'Buyer Name', width: 160, headerAlign: 'center', align: 'center' },
+  { field: 'buyer_name', headerName: 'Buyer Name', width: 140, headerAlign: 'center', align: 'center' },
   { field: 'product_name', headerName: 'Product Name', width: 160, headerAlign: 'center', align: 'center' },
   {
     field: 'quantity',
@@ -22,8 +22,8 @@ const columns = [
     ),
   },
   { field: 'amount_paid', headerName: 'Amount Paid', width: 120, headerAlign: 'center', align: 'center' },
-  { field: 'payment_method', headerName: 'Payment Method', width: 120, headerAlign: 'center', align: 'center' },
-  { field: 'payment_date', headerName: 'Payment Date', width: 100, headerAlign: 'center', align: 'center' },
+  { field: 'payment_method', headerName: 'Payment Method', width: 140, headerAlign: 'center', align: 'center' },
+  { field: 'payment_date', headerName: 'Payment Date', width: 140, headerAlign: 'center', align: 'center' },
 ];
 
 const rows = [

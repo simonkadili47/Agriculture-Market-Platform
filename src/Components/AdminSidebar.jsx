@@ -8,6 +8,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlinePayments } from "react-icons/md";
 import { GrUserManager } from "react-icons/gr"; 
 import { HiOutlineDocumentReport } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 
 const AdiminSidebar = () => {
@@ -57,7 +58,7 @@ const AdiminSidebar = () => {
       <div className="flex ">
         {/* Sidebar */}
         <div className="w-1/7 h-screen bg-white p-6 ">
-        <li className="mb-2 bg-orange-400 p-3 px-4 rounded-lg inline-flex items-center">
+        <li className="mb-2 bg-orange-400 p-3 px-4 rounded-lg inline-flex items-center  text-gray-700 hover:text-blue-600">
         <TfiDashboard className="mr-2 text-2xl" />
                     <a href="/AdminDashboard" className="text-gray-600">Dashboard</a>
                   </li>
@@ -71,11 +72,11 @@ const AdiminSidebar = () => {
               {dropdownStates.usermanagement && (
                 <ul className="mt-2 ml-4">
                   <li className="mb-2">
-                    <a href="/Admin/add-users" className="text-gray-600">Add Users</a>
+                  <a to href="/Admin/add-users" className="text-gray-600  hover:text-blue-600">Add Users</a>
                   </li>
                 
                   <li className="mb-2">
-                    <a href="/Admin/view-users" className="text-gray-600">View Users</a>
+                  <a href="/Admin/view-users" className="text-gray-600  hover:text-blue-600">View Users</a>
                   </li>
                 </ul>
               )}
@@ -88,11 +89,11 @@ const AdiminSidebar = () => {
               </div>
               {dropdownStates.productmanagement&& (
                 <ul className="mt-2 ml-4">
-                  <li className="mb-2">
-                    <a href="/Admin/view-products" className="text-gray-600">View Products</a>
+                  <li className="mb-2 ">
+                    <Link to href="/Admin/view-products" className="text-gray-600  hover:text-blue-600">View Products</Link>
                   </li>
-                  <li className="mb-2">
-                    <a href="/Admin/view-category" className="text-gray-600">View Category</a>
+                  <li className="mb-2 ">
+                    <Link to href="/Admin/view-category" className="text-gray-600  hover:text-blue-600">View Category</Link>
                   </li>
                 
                 </ul>
@@ -106,8 +107,8 @@ const AdiminSidebar = () => {
               </div>
               {dropdownStates.ordermanagement && (
                 <ul className="mt-2 ml-4">
-                  <li className="mb-2">
-                    <a href="/Admin/view-orders" className="text-gray-600">Monitor Orders</a>
+                  <li className="mb-2 ">
+                  <a href="/Admin/view-orders" className="  text-gray-700 hover:text-blue-600">Monitor Orders</a>
                   </li>
                   
                 </ul>
@@ -122,7 +123,7 @@ const AdiminSidebar = () => {
               {dropdownStates.reports && (
                 <ul className="mt-2 ml-4">
                   <li className="mb-2">
-                    <a href="#" className="text-gray-600">Sales Reports</a>
+                    <a href="/Admin/sales-report" className="text-gray-600  hover:text-blue-600">Sales Reports</a>
                   </li>
                   <li className="mb-2">
                     <a href="#" className="text-gray-600">Order Reports</a>

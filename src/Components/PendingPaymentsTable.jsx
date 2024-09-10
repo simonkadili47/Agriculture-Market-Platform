@@ -8,7 +8,7 @@ const columns = [
   { field: 'quantity', headerName: 'Quantity', width: 100, editable: true },
   { field: 'total_amounts', headerName: 'Total Amounts', width: 120, editable: true },
   { field: 'order_date', headerName: 'Order Date', width: 120, editable: true },
-  { field: 'payment_due_date', headerName: 'Payment Due Date', width: 120, editable: true },
+  { field: 'payment_due_date', headerName: 'Payment Due Date', width: 150, editable: true },
 ];
 
 const rows = [
