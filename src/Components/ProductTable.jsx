@@ -108,12 +108,10 @@ const rows = [
 ];
 
 const handleEdit = (id) => {
-  // Handle the edit action here
   console.log('Edit row with ID:', id);
 };
 
 const handleDelete = (id) => {
-  // Handle the delete action here
   console.log('Delete row with ID:', id);
 };
 
@@ -133,8 +131,10 @@ export default function ProductTable() {
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
-        sx={{ 
+        sx={{
+          backgroundColor: 'white', // Set the background to white
           '& .MuiDataGrid-columnHeaders': { 
+            backgroundColor: '#f5f5f5',  // Optional: gray background for headers
             whiteSpace: 'nowrap',
           },
           '& .MuiDataGrid-cell': {
@@ -144,6 +144,10 @@ export default function ProductTable() {
           },
           '& .MuiDataGrid-root': {
             overflow: 'hidden',
+            border: 'none',  // Remove the root border
+          },
+          '& .MuiDataGrid-columnHeader, & .MuiDataGrid-cell': {
+            border: 'none',  // Remove the cell borders
           },
           '& .MuiDataGrid-virtualScroller': {
             overflow: 'hidden',

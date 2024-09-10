@@ -27,6 +27,8 @@ import BuyerPaidPayment from './Pages/BuyersPaidPayment';
 import AdiminDashboard from './Admin Dashboard/Admin_Dashboard'
 import AddUsers from './Pages/AddUsers';
 import ViewUsers from './Pages/ViewUsers'
+import AdminViewProduct from './Pages/AdminViewProduct';
+import AdminViewCategory from './Pages/AdminViewCategory'
 
 
 const App = () => {
@@ -65,6 +67,9 @@ const App = () => {
         <Route path="/AdminDashboard" element={<AdiminDashboard />} />
         <Route path="/Admin/add-users" element={<AddUsers/>} />
         <Route path="/Admin/view-users" element={<ViewUsers/>} />
+        <Route path="/Admin/view-products" element={<AdminViewProduct/>} />
+        <Route path="/Admin/view-category" element={<AdminViewCategory/>} />
+
       </Routes>
     </div>
   );

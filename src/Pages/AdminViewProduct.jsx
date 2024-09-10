@@ -1,27 +1,24 @@
 import React from 'react';
 import Header from '../Components/Header';
-import Sidebar from '../Components/Sidebar';
+import AdminSidebar from '../Components/AdminSidebar';
 import ProductTable from '../Components/ProductTable';
 
-const ViewProduct = () => {
+const AdminViewProduct = () => {
   return (
     <div className="flex flex-col mt-20 min-h-screen bg-gray-100">
       <Header />
       <div className="flex flex-1">
-        <Sidebar />
-        <main className="flex-1 p-4 ml-64">
+        <AdminSidebar/>
+        <main className="flex-1 p-4 ml-16">
+          
           <div className="mb-6">
             <div className="flex justify-between items-center mb-4">
               <h1 className="text-xl font-bold ml-2 text-black">View All Products</h1>
-              <button className="p-3 bg-green-600 text-white rounded-lg hover:bg-green-700">
-                <a href="/farmer/add-product">Add Product</a>
-              </button>
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="w-full max-w-5xl"> 
-              <ProductTable />
-            </div>
+        
+          <div className="w-full max-w-5xl"> 
+            <ProductTable />
           </div>
         </main>
       </div>
@@ -29,4 +26,4 @@ const ViewProduct = () => {
   );
 };
 
-export default ViewProduct;
+export default AdminViewProduct;
