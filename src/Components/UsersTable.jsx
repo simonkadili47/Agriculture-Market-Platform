@@ -9,7 +9,8 @@ const columns = [
   {
     field: 'actions',
     headerName: 'Actions',
-    width: 200,
+    width: 160,
+    flex:0,
     sortable: false,
     renderCell: (params) => (
       <div>
@@ -23,7 +24,7 @@ const columns = [
         </Button>
         <Button
           variant="contained"
-          color="error" 
+          color="error"
           size="small"
           onClick={() => handleDelete(params.row.id)}
         >
@@ -37,6 +38,11 @@ const columns = [
 const rows = [
   { id: 1, full_name: 'Juma Hamza', email: 'juma@gmail.com', role: 'farmer' },
   { id: 2, full_name: 'Joshua Hamza', email: 'joshua@gmail.com', role: 'buyer' },
+  { id: 3, full_name: 'Joshua Hamza', email: 'joshua@gmail.com', role: 'buyer' },
+  { id: 4, full_name: 'Joshua Hamza', email: 'joshua@gmail.com', role: 'buyer' },
+  { id: 5, full_name: 'Joshua Hamza', email: 'joshua@gmail.com', role: 'buyer' },
+  { id: 6, full_name: 'Joshua Hamza', email: 'joshua@gmail.com', role: 'buyer' },
+  { id: 7, full_name: 'Joshua Hamza', email: 'joshua@gmail.com', role: 'buyer' },
 ];
 
 function handleEdit(id) {
@@ -49,26 +55,24 @@ function handleDelete(id) {
   // Implement your delete logic here
 }
 
-export default function ProductTable() {
+export default function UsersTable() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-      <div style={{ height: 400, width: 'auto', maxWidth: '600px', marginLeft: '20px' }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: {
-                pageSize: 5,
-              },
+    <div style={{ height: 400, width: '70%', margin: '20px auto' }}> 
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: {
+              pageSize: 5,
             },
-          }}
-          pageSizeOptions={[5]}
-          checkboxSelection
-          disableRowSelectionOnClick
-          autoHeight
-        />
-      </div>
+          },
+        }}
+        pageSizeOptions={[5]}
+        checkboxSelection
+        disableRowSelectionOnClick
+        autoHeight
+      />
     </div>
   );
 }

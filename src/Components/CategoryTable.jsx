@@ -8,7 +8,7 @@ const columns = [
   {
     field: 'actions',
     headerName: 'Actions',
-    width: 150,
+    width: 160,
     sortable: false,
     renderCell: (params) => (
       <div>

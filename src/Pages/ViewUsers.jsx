@@ -9,17 +9,17 @@ const ViewUsers = () => {
       <Header />
       <div className="flex flex-1">
         <AdminSidebar />
-        <main className="flex-1 p-4 ml-12"> 
-          <div className="mb-2">
-            <div className="flex justify-between items-center mb-2"> 
-              <h1 className="text-xl font-bold text-black">View All Users</h1> 
+        <main className="flex-1 p-4 ml-12">
+          <div className="mb-1"> 
+            <div className="flex justify-between items-center mb-1"> 
+              <h1 className="text-xl font-bold text-black">View All Users</h1>
               <button className="p-3 bg-green-600 text-white rounded-lg hover:bg-green-700">
                 <a href="/Admin/add-users">Add User</a>
               </button>
             </div>
           </div>
-          {/* Table container */}
-          <div className="mt-0">
+          
+          <div className="mt-6 overflow-x-auto"> 
             <UsersTable />
           </div>
         </main>
