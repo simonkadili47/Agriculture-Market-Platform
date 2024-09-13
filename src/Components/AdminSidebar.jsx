@@ -90,10 +90,10 @@ const AdiminSidebar = () => {
               {dropdownStates.productmanagement&& (
                 <ul className="mt-2 ml-4">
                   <li className="mb-2 ">
-                    <Link to href="/Admin/view-products" className="text-gray-600  hover:text-blue-600">View Products</Link>
+                    <a href="/Admin/view-products" className="text-gray-600  hover:text-blue-600">View Products</a>
                   </li>
                   <li className="mb-2 ">
-                    <Link to href="/Admin/view-category" className="text-gray-600  hover:text-blue-600">View Category</Link>
+                    <a href="/Admin/view-category" className="text-gray-600  hover:text-blue-600">View Category</a>
                   </li>
                 
                 </ul>

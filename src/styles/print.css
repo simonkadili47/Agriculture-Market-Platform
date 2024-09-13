@@ -1,0 +1,37 @@
+/* print.css */
+
+@media print {
+  /* Hide unnecessary elements */
+  .no-print {
+    display: none;
+  }
+
+  /* Ensure the table takes up the full page width */
+  .MuiDataGrid-root {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  /* Style table headers */
+  .MuiDataGrid-columnHeaders {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+
+  /* Style table cells */
+  .MuiDataGrid-cell {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  /* Ensure table rows have proper spacing */
+  .MuiDataGrid-row {
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Ensure pagination controls and other non-print elements are hidden */
+  .MuiDataGrid-footerContainer,
+  .MuiDataGrid-toolbarContainer {
+    display: none;
+  }
+}

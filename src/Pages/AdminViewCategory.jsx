@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header';
 import AdiminSidebar from '../Components/AdminSidebar';
-import CategoryTable from '../Components/CategoryTable';
+import AdminViewCategoryTable from '../Components/AdminCategoryTable'
 
 const ViewCategory = () => {
   return (
@@ -19,7 +19,7 @@ const ViewCategory = () => {
           </div>
          
           <div className="overflow-x-auto">
-            <CategoryTable />
+           <AdminViewCategoryTable/>
           </div>
         </main>
       </div>

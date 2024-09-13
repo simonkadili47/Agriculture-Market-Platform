@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header';
 import AdminSidebar from '../Components/AdminSidebar';
-import ProductTable from '../Components/ProductTable';
+import AdminViewProductTable from '../Components/AdminProductTable'
 
 const AdminViewProduct = () => {
   return (
@@ -18,7 +18,7 @@ const AdminViewProduct = () => {
           </div>
         
           <div className="w-full max-w-5xl"> 
-            <ProductTable />
+          <AdminViewProductTable/>
           </div>
         </main>
       </div>

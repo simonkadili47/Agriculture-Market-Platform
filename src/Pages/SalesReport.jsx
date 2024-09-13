@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header';
 import AdiminSidebar from '../Components/AdminSidebar';
+import ReportSales from '../Components/ReportsalesTable'
 
 const SalesReport = () => {
   return (
@@ -8,7 +9,7 @@ const SalesReport = () => {
       <Header />
       <div className="flex flex-1">
        <AdiminSidebar/>
-        <main className="flex-1 p-4 ml-64"> {/* Adjust ml-64 to the width of your sidebar */}
+        <main className="flex-1 p-4 ml-4"> {/* Adjust ml-64 to the width of your sidebar */}
           {/* Container for heading and button */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-4">
@@ -18,7 +19,7 @@ const SalesReport = () => {
           </div>
           {/* Table container */}
           <div className="overflow-x-auto">
-        
+            <ReportSales/>
           </div>
         </main>
       </div>
