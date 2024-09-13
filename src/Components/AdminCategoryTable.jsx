@@ -6,25 +6,25 @@ const columns = [
   { field: 'id', headerName: 'Category ID', width: 120, editable: true },
   { field: 'Categoryname', headerName: 'Category Name', width: 200, editable: true },
   { field: 'Categorydescription', headerName: 'Category Description', width: 200, editable: true },
-  {
-    field: 'actions',
-    headerName: 'Actions',
-    width: 160,
-    sortable: false,
-    renderCell: (params) => (
-      <div>
+  // {
+  //   field: 'actions',
+  //   headerName: 'Actions',
+  //   width: 160,
+  //   sortable: false,
+  //   renderCell: (params) => (
+  //     <div>
        
-        <Button
-          variant="contained"
-          color="error" 
-          size="small"
-          onClick={() => handlePrint(params.row.id)}
-        >
-          Print
-        </Button>
-      </div>
-    ),
-  },
+  //       <Button
+  //         variant="contained"
+  //         color="error" 
+  //         size="small"
+  //         onClick={() => handlePrint(params.row.id)}
+  //       >
+  //         Print
+  //       </Button>
+  //     </div>
+  //   ),
+  // },
 ];
 
 const rows = [
@@ -38,10 +38,10 @@ const rows = [
 
 
 
-function handlePrint(id) {
-  console.log(`Delete row with id: ${id}`);
-  // Implement your delete logic here
-}
+// function handlePrint(id) {
+//   console.log(`Delete row with id: ${id}`);
+//   // Implement your delete logic here
+// }
 
 export default function AdminCategoryTable() {
   return (

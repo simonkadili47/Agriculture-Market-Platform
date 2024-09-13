@@ -11,38 +11,34 @@ const columns = [
   { field: 'total_amount', headerName: 'Total Amount', flex: 1, editable: true },
   { field: 'payment_status', headerName: 'Payment Status', flex: 1, editable: true },
   { field: 'buyer_name', headerName: 'Buyer Name', flex: 1, editable: true },
-  {
-    field: 'actions',
-    headerName: 'Actions',
-    flex: 1.2, // Reduced flex to balance width for action buttons
-    sortable: false,
-    renderCell: (params) => (
-      <div>
+  // {
+  //   field: 'actions',
+  //   headerName: 'Actions',
+  //   flex: 1.2, // Reduced flex to balance width for action buttons
+  //   sortable: false,
+  //   renderCell: (params) => (
+  //     <div>
        
-        <Button
-          variant="contained"
-          color="error"
-          size="small"
-          onClick={() => handlePrint(params.row.id)}
-        >
-       Print
-        </Button>
-      </div>
-    ),
-  },
+  //       {/* <Button
+  //         variant="contained"
+  //         color="error"
+  //         size="small"
+  //         onClick={() => handlePrint(params.row.id)}
+  //       >
+  //      Print
+  //       </Button> */}
+  //     </div>
+  //   ),
+  // },
 ];
 
 const rows = [
   { id: 1, farmer_name: 'John Ilomo', product_name: 'Potatoes', quantity: '10kg', selling_price: '5000/kg', total_amount: '50000', payment_status: 'pending', buyer_name: 'John Juma' },
 ];
 
-function handleEdit(id) {
-  console.log(`Edit row with id: ${id}`);
-}
 
-function handleDelete(id) {
-  console.log(`Delete row with id: ${id}`);
-}
+
+
 
 export default function ReportsalesTable() {
   return (
