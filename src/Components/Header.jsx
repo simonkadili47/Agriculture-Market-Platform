@@ -10,6 +10,7 @@ const Header = () => {
   const userMenuRef = useRef(null);
   const navigate = useNavigate();
 
+  // Simulated user data; ideally, you'd fetch this from your auth context or API
   const user = {
     name: "John Doe",
     role: "Farmer",
@@ -35,18 +36,19 @@ const Header = () => {
   const handleLogout = async () => {
     try {
       const token = localStorage.getItem('token'); 
+    //   console.log('Token before logout:', token);
+
       const response = await axios.post('http://127.0.0.1:8000/api/logout', {}, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
-        withCredentials: true,
       });
 
       if (response.status === 200) {
-        console.log('Logout successful');
-        localStorage.removeItem('token'); // Clear the token
-        navigate('/login'); // Redirect to login
+        // console.log('Logout successful');
+        localStorage.removeItem('token'); 
+        navigate('/login'); 
       } else {
         console.error('Logout failed:', response.data.message);
       }

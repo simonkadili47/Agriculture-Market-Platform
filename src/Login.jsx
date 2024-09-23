@@ -20,20 +20,22 @@ const Login = () => {
         email,
         password,
       });
-      // Assuming the response contains the role information
+
+      // Store the token
+      localStorage.setItem('token', response.data.token); 
+
       const { role } = response.data;
 
-      // Show success message
       toast.success('Login successful!', {
         position: "top-center",
         autoClose: 2000, 
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
+        style: { padding: '4px 8px' }, 
       });
 
       setTimeout(() => {
-        // Redirect based on user role
         if (role === 'farmer') {
           navigate('/Farmer-Dashboard'); 
         } else if (role === 'buyer') {
@@ -45,6 +47,14 @@ const Login = () => {
     } catch (error) {
       if (error.response && error.response.data) {
         setError(error.response.data.message || 'Invalid login credentials');
+        toast.error(error.response.data.message || 'Invalid login credentials', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          style: { padding: '2px 4px' }, 
+        });
       } else {
         setError('An error occurred. Please try again later.');
       }
