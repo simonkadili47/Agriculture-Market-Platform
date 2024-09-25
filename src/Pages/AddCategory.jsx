@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header';
 import Sidebar from '../Components/Sidebar';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddCategory = () => {
   const [formData, setFormData] = useState({
@@ -19,12 +21,15 @@ const AddCategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = 'YOUR_API_URL'; // Replace with your actual API URL
+    // Get the token from localStorage
+    const token = localStorage.getItem('token'); 
+    const apiUrl = 'http://127.0.0.1:8000/api/categories/';
 
     const requestOptions = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`, 
       },
       body: JSON.stringify(formData),
     };
@@ -35,11 +40,21 @@ const AddCategory = () => {
       if (response.ok) {
         const data = await response.json();
         console.log('Category added successfully:', data);
+        toast.success('Category added successfully!', {
+          position: 'top-right',
+        });
       } else {
         console.error('Failed to add category:', response.statusText);
+        toast.error('Failed to add category!', {
+          position: 'top-right',
+        });
       }
     } catch (error) {
       console.error('Error while adding category:', error);
+      // Show error toast notification
+      toast.error('Error while adding category!', {
+        position: 'top-right',
+      });
     }
 
     setFormData({
@@ -51,10 +66,8 @@ const AddCategory = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
-
       <div className="flex flex-1">
         <Sidebar />
-
         <main className="flex-1 p-4 flex items-center justify-center">
           <div className="w-full max-w-lg">
             <h1 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Add New Category</h1>
@@ -102,6 +115,7 @@ const AddCategory = () => {
           </div>
         </main>
       </div>
+      <ToastContainer />
     </div>
   );
 };
