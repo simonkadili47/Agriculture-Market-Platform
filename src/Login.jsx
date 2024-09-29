@@ -28,7 +28,7 @@ const Login = () => {
 
       toast.success('Login successful!', {
         position: "top-center",
-        autoClose: 2000, 
+        autoClose: 1000, 
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,

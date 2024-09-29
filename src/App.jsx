@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom'; 
 import Login from './Login';
 import Register from './Register';
+// import Otp from '../Otp';
 
 // Farmer Dashboard and Pages
 import Dashboardf from './Farmer Dashboard/FarmerDashboard';
@@ -42,6 +43,7 @@ const App = () => {
 
         {/* Authentication Routes */}
         <Route path="login" element={<Login />} />
+        {/* <Route path="otp" element={<Otp/>} /> */}
         <Route path="register" element={<Register />} />
 
         {/* Farmer Dashboard and Routes */}

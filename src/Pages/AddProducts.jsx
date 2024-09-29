@@ -24,12 +24,15 @@ const AddProducts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = 'YOUR_API_URL'; // Replace with your actual API URL
+    // Get the token from localStorage
+    const token = localStorage.getItem('token'); 
+    const apiUrl = 'http://127.0.0.1:8000/api/product';
 
     const requestOptions = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`, 
       },
       body: JSON.stringify(formData),
     };
@@ -40,11 +43,21 @@ const AddProducts = () => {
       if (response.ok) {
         const data = await response.json();
         console.log('Product added successfully:', data);
+        toast.success('Product added successfully!', {
+          position: 'top-right',
+        });
       } else {
         console.error('Failed to add product:', response.statusText);
+        toast.error('Failed to add product!', {
+          position: 'top-right',
+        });
       }
     } catch (error) {
       console.error('Error while adding product:', error);
+      // Show error toast notification
+      toast.error('Error while adding product!', {
+        position: 'top-right',
+      });
     }
 
     setFormData({

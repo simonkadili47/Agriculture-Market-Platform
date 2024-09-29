@@ -39,9 +39,12 @@ const Register = () => {
       });
 
       if (response.status === 201) {
-        toast.success('Registration successful', { autoClose: 2000 });
-        setTimeout(() => navigate('/login'), 1000); // Redirect to login after 1 second
+        toast.success('Registration successful!', { autoClose: 1000 });
+        setTimeout(() => {
+          navigate('/login'); 
+        }, 1000);
 
+        
         setFormData({
           full_name: '',
           email: '',
@@ -56,9 +59,9 @@ const Register = () => {
       console.error('Error:', error);
       if (error.response && error.response.data.errors) {
         const errorMessages = Object.values(error.response.data.errors).flat();
-        errorMessages.forEach(msg => toast.error(msg, { autoClose: 2000 }));
+        errorMessages.forEach(msg => toast.error(msg, { autoClose: 1000 }));
       } else {
-        toast.error('An error occurred. Please try again later.', { autoClose: 2000 });
+        toast.error('An error occurred. Please try again later.', { autoClose: 1000 });
       }
     }
   };
@@ -70,6 +73,7 @@ const Register = () => {
           Register To Create Account
         </h1>
         <form onSubmit={handleSubmit}>
+          {/* Full Name Input */}
           <div className="mb-4">
             <label htmlFor="full_name" className="block mb-2 text-sm font-medium text-black">
               Full Name
@@ -85,6 +89,7 @@ const Register = () => {
             />
           </div>
 
+          {/* Email Input */}
           <div className="mb-4">
             <label htmlFor="email" className="block mb-2 text-sm font-medium text-black">
               Email
@@ -100,6 +105,7 @@ const Register = () => {
             />
           </div>
 
+          {/* Password Input */}
           <div className="mb-4">
             <label htmlFor="password" className="block mb-2 text-sm font-medium text-black">
               Password
@@ -115,6 +121,7 @@ const Register = () => {
             />
           </div>
 
+          {/* Confirm Password Input */}
           <div className="mb-4">
             <label htmlFor="confirmPassword" className="block mb-2 text-sm font-medium text-black">
               Confirm Password
@@ -130,6 +137,7 @@ const Register = () => {
             />
           </div>
 
+          {/* Role Input */}
           <div className="mb-4">
             <label htmlFor="role" className="block text-sm font-medium text-black mb-1">
               Role
@@ -154,6 +162,7 @@ const Register = () => {
           >
             Register
           </button>
+
           <div className="mt-4 text-center">
             <span className="text-sm text-gray-600">
               Have an Account? <Link to="/login" className="text-indigo-600 hover:underline pl-3">Login</Link>
