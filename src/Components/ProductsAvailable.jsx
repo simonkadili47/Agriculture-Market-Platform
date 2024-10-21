@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import leafy_image from '../assets/leafy Veggies.webp';
+import leafy_image from '../assets/Leafy Veggies.webp'
 import maize_image from '../assets/maize.webp';
 
 // Static data with imported images
