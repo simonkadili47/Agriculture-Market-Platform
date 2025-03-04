@@ -34,7 +34,7 @@ const Sidebar = () => {
         </li>
         <li className="mb-6 mt-3">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('myProducts')}>
-            <AiFillProduct className="mr-2 text-xl" />
+            <AiFillProduct className="mr-2 text-md" />
             <span className="flex-grow">My Products</span>
             {dropdownStates.myProducts ? <FaChevronUp /> : <FaChevronDown />}
           </div>
@@ -57,13 +57,13 @@ const Sidebar = () => {
         </li>
         <li className="mb-6">
           <div className="flex items-center text-gray-700 cursor-pointer">
-            <RxBorderSplit className="mr-2 text-xl" />
+            <RxBorderSplit className="mr-2 text-md" />
             <Link to="/Farmer/orders" className="text-gray-600 hover:text-blue-600">Orders</Link>
           </div>
         </li>
         <li className="mb-6">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('marketTrends')}>
-            <SiMarketo className="mr-2 text-xl" />
+            <SiMarketo className="mr-2 text-md" />
             <span className="flex-grow">Market Trends</span>
             {dropdownStates.marketTrends ? <FaChevronUp /> : <FaChevronDown />}
           </div>
@@ -77,7 +77,7 @@ const Sidebar = () => {
         </li>
         <li className="mb-6">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('payments')}>
-            <MdPayments className="mr-2 text-xl" />
+            <MdPayments className="mr-2 text-md" />
             <span className="flex-grow">Payments</span>
             {dropdownStates.payments ? <FaChevronUp /> : <FaChevronDown />}
           </div>
@@ -97,7 +97,7 @@ const Sidebar = () => {
         </li>
         <li className="mb-6">
           <div className="flex items-center text-gray-700 cursor-pointer" onClick={() => handleDropdownToggle('settings')}>
-            <IoSettingsOutline className='mr-2 text-xl' />
+            <IoSettingsOutline className='mr-2 text-md' />
             <span className='flex-grow'>Settings</span>
             {dropdownStates.settings ? <FaChevronUp /> : <FaChevronDown />}
           </div>
