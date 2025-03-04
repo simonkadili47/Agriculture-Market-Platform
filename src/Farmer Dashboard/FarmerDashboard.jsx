@@ -5,7 +5,7 @@ import DashboardCards from '../Components/DashboardCards';
 
 const Dashboardf = ({ children }) => {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex bg-blue-50 flex-col h-screen">
       <Header />
       <div className="flex flex-1">
         <Sidebar />
